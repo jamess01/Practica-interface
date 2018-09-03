@@ -40,6 +40,15 @@ public class Consultor {
         }
     }
     
+    public void modificar(String nombre){
+        for(Estudiante estudianteAModificar:estudiantes){
+            System.out.println(" "+estudianteAModificar.getNombre());
+            
+        }
+        
+        
+    }
+    
     
     
   

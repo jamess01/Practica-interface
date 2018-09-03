@@ -50,12 +50,36 @@ public class Capturista {
     }
     
     
+    public void modificar(){
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("Ingresa el nombre de la persona a modificar");
+        String modi= sc1.nextLine();
+     
+        laSecre.onModificar("La persona ha sido modificada "+modi);
+        
+    }
+    
+    
+    public void eliminar(){
+        Scanner Scdele = new Scanner(System.in);
+        System.out.println("Ingrese el nombre de la persona a eliminar1");
+        String data = Scdele.nextLine();
+        laSecre.onIngresadoParaBorrar("la persona ha sido eliminada " +data);
+        
+    }
+    
+    
+    
     public interface onCapturistaAction{
         public void onCaptura();
         public void onErrorOnCaptura();
         public void onNombreABuscarIngresado(String ingresado);
         public void onCapturaTerminada(Estudiante estudiante);
         public void onIngresadoParaBorrar(String ingresado);
+
+        public void onCapturaTerminada(String modi);
+
+        public void onModificar(String string);
     }
     
 }

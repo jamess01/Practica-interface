@@ -36,8 +36,11 @@ public class Secretaria implements onConsultorInterface,onCapturistaAction {
                     capturista.ingresoDeNombre();
                     break;
                 case 3:
+                    capturista.modificar();
                     break;
-                case 4:break;
+                case 4:
+                    capturista.eliminar();
+                    break;
                 case 5:
                     cond=false;
                     break;
@@ -95,6 +98,16 @@ public class Secretaria implements onConsultorInterface,onCapturistaAction {
     public void onEstudianteBorrado(String data) {
         System.out.println("Estudiante borrado ->"+data);
         consultor.muestra();
+    }
+
+    @Override
+    public void onCapturaTerminada(String modi) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onModificar(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
